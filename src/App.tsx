@@ -358,8 +358,19 @@ function DmListScreen({
 
 export default function App() {
   return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
+    <div
+      style={{
+        color: 'white',
+        background: '#0a0b14',
+        height: '100vh',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '30px',
+      }}
+    >
+      Pulse çalışıyor 🚀
+    </div>
   );
 }
