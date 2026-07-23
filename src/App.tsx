@@ -360,17 +360,17 @@ export default function App() {
   return (
     <div
       style={{
-        background: '#0a0b14',
-        color: 'white',
-        height: '100vh',
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: '30px'
+        backgroundColor: "red",
+        color: "white",
+        height: "100vh",
+        width: "100vw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: "40px"
       }}
     >
-      Pulse çalışıyor 🚀
+      TEST ÇALIŞIYOR
     </div>
   );
 }
