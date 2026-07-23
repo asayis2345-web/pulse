@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-ig-purple: #833AB4;
+  --color-ig-pink: #E1306C;
+  --color-ig-orange: #F77737;
+  --color-ig-yellow: #FCAF45;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    overscroll-behavior: none;
+  }
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+  input, textarea {
+    user-select: text;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(168, 170, 255, 0.15) transparent;
+    -webkit-overflow-scrolling: touch;
+  }
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgba(168, 170, 255, 0.15);
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .ig-gradient {
+    background: linear-gradient(45deg, #FCAF45, #F77737, #E1306C, #833AB4);
+  }
+  .ig-gradient-text {
+    background: linear-gradient(45deg, #FCAF45, #F77737, #E1306C, #833AB4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .ig-story-ring {
+    background: linear-gradient(45deg, #FCAF45, #F77737, #E1306C, #833AB4);
+    padding: 2px;
+    border-radius: 9999px;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.25s ease-out;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(225, 48, 108, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(225, 48, 108, 0.6); }
+}
