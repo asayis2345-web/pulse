@@ -19,6 +19,7 @@ workflows:
       - name: Sync Capacitor
         script: |
           npx cap sync android
+          ls android/app/src/main/assets/public
 
       - name: Build APK
         script: |
@@ -28,8 +29,3 @@ workflows:
 
     artifacts:
       - android/app/build/outputs/apk/debug/*.apk
-
-    publishing:
-      email:
-        recipients:
-          - your-email@example.com
