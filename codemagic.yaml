@@ -8,6 +8,7 @@ workflows:
       java: 21
 
     scripts:
+
       - name: Install dependencies
         script: |
           npm install
@@ -16,10 +17,20 @@ workflows:
         script: |
           npm run build
 
+      - name: Check dist folder
+        script: |
+          ls -la
+          ls -la dist
+
       - name: Sync Capacitor
         script: |
+          npx cap copy android
           npx cap sync android
-          ls android/app/src/main/assets/public
+
+      - name: Check Android assets
+        script: |
+          ls -la android/app/src/main
+          ls -la android/app/src/main/assets || true
 
       - name: Build APK
         script: |
@@ -29,3 +40,8 @@ workflows:
 
     artifacts:
       - android/app/build/outputs/apk/debug/*.apk
+
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
