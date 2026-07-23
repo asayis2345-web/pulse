@@ -360,14 +360,14 @@ export default function App() {
   return (
     <div
       style={{
-        color: 'white',
         background: '#0a0b14',
+        color: 'white',
         height: '100vh',
         width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        fontSize: '30px',
+        fontSize: '30px'
       }}
     >
       Pulse çalışıyor 🚀
